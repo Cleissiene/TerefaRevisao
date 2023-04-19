@@ -6,8 +6,9 @@ public class LojaJogos {
         int opcao =0;
         Cliente cliente = new Cliente();
         Ingresso ingresso = new Ingresso();
+        Pedido pedido = new Pedido();
 
-        try{
+       // try{
 
             do {
                 //Ingresso ingresso;
@@ -31,29 +32,39 @@ public class LojaJogos {
                         "QUANTIDADE", JOptionPane.PLAIN_MESSAGE));
                 ingresso.setQuantidade(qtdingresso);
 
+                String finaliza = "Pedido feito para " + cliente.getNome() + "\n" + ingresso.getQuantidade() + " Ingressos: " + ingresso.getPartida() +
+                       "\n Valor: " + pedido.calcula();
+                JOptionPane.showMessageDialog(null, finaliza, "PEDIDO FINALIZADO", JOptionPane.PLAIN_MESSAGE);
 
-                String carrinho = JOptionPane.showInputDialog(null, "Deseja retornar para escolher outro jogo? \n 1.SIM \n 2.NÃO", "CARRINHO", JOptionPane.PLAIN_MESSAGE)
+                String carrinho = JOptionPane.showInputDialog(null, "Deseja retornar para escolher outro jogo? \n 1.SIM \n 2.NÃO", "CARRINHO", JOptionPane.PLAIN_MESSAGE);
                 opcao = Integer.parseInt(carrinho);
 
-                while (opcao ==1){
-            }
-                //if (carrinho == 1)
-                  //retornar para a tela String nomejogo
+                pedido.setValor(valorjogo);
 
-               // else
+//                String finaliza = "Pedido feito para " + cliente.getNome() + "\n" + ingresso.getQuantidade() + " Ingressos: " + ingresso.getPartida() +
+//                        "\n Valor: " + pedido.calcula();
+//                JOptionPane.showMessageDialog(null, finaliza, "PEDIDO FINALIZADO", JOptionPane.PLAIN_MESSAGE);
+            }
+
+                while (opcao ==1);
+
+
+
+
+
                     //retornar mensagem pedido finalizado e o calculo
-                //String finaliza= JOptionPane.showMessageDialog(null, getMessage, "PEDIDO FINALIZADO", JOptionPane.PLAIN_MESSAGE);
+               // JOptionPane.showMessageDialog(null, finaliza, "PEDIDO FINALIZADO", JOptionPane.PLAIN_MESSAGE);
                 //opcao = Integer.parseInt(finaliza);
-            }
-
-                catch(Exception){
-                JOptionPane.showMessageDialog(null, get.Messenger, "Opção invalida, escolha 1 para nova compra e 2 para finalizar", JOptionPane.ERROR_MESSAGE);
-                }
+//            }
+//
+//                catch(Exception){
+//                JOptionPane.showMessageDialog(null, get.Messenger, "Opção invalida, escolha 1 para nova compra e 2 para finalizar", JOptionPane.ERROR_MESSAGE);
+//                }
 
 
         }
 
 
     }
-}
+
 

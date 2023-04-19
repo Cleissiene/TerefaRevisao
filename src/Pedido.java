@@ -8,7 +8,7 @@ public class Pedido extends Ingresso {
     //private double total;
 
     public double calcula(){
-        return getValor() * getQuantidade();
+        return super.getValor() * getQuantidade();
     }
 
 }
